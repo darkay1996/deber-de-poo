@@ -1,5 +1,6 @@
 package clasestringymetodos;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
 public class ClaseStringyMetodos {
@@ -148,6 +149,7 @@ public class ClaseStringyMetodos {
                     break;
                 case 7:
                     //Metodo String copyValueOf() 
+                    System.out.println("String copyValueOf()");
                     char[] cadena5 = {'h', 'o', 'l', 'a',' ', 'M', '2', 'A'};
                     String cadena6 = " ";
                     cadena6 = cadena6.copyValueOf( cadena5 );
@@ -156,12 +158,213 @@ public class ClaseStringyMetodos {
                     opc=leer.nextInt();
                     break;
                 case 8:
+                    System.out.println("String copyValueOf(data, offset, count)");
+                    System.out.println("char[] cadena7 = {'h', 'o', 'l', 'a',' ', 'M', '2', 'A'};");
+                    System.out.println("String cadena8 = " );
+                    char[] cadena7 = {'h', 'o', 'l', 'a',' ', 'M', '2', 'A'};
+                    String cadena8 = " ";
+                    System.out.println("cadena8 = cadena8.copyValueOf( cadena7, 2, 6 );");
+                    System.out.println("System.out.println(cadena8);");
+                    cadena8 = cadena8.copyValueOf( cadena7, 2, 6 );
+                    System.out.println(cadena8);
+                    System.out.println("regresar al menu 1. si 2. no");
+                    opc=leer.nextInt();
                     break;
                 case 9:
+                    System.out.println("String endsWith ()");
+                    System.out.println("String Str = new String(\"hola somos del M2A\");");
+                    System.out.println("boolean retVal;");
+                    System.out.println("retVal = Str.endsWith( \"M2A\" );");
+                    System.out.println("System.out.println(retVal );");
+                    
+                    System.out.println("retVal = Str.endsWith( \"M\" );");
+                    String Str = new String("hola somos del M2A");
+                    System.out.println(" System.out.println(retVa );");
+                    boolean retVal;
+                        retVal = Str.endsWith( "M2A" );
+                    System.out.println(retVal );
+                    retVal = Str.endsWith( "M" );
+                    System.out.println(retVal );
+                    System.out.println("regresar al menu 1. si 2. no");
+                    opc=leer.nextInt();
                     break;
                 case 10:
+                    System.out.println("Método String equals ()");
+                    System.out.println("String cadena9 = new String(\"hola somos el M2A\");");
+                    System.out.println("String cadena10 = cadena9;");
+                    System.out.println("String cadena11 = new String(\"hola somos el M2B\");");
+                    System.out.println("boolean valor;");
+                    System.out.println("valor = cadena9.equals( cadena10 );");
+                    System.out.println("valor = cadena9.equals( cadena11 );");
+                    String cadena9 = new String("hola somos el M2A");
+                    String cadena10 = cadena9;
+                    String cadena11 = new String("hola somos el M2b");
+                    boolean valor;
+
+                    valor = cadena9.equals( cadena10 );
+                    System.out.println(valor);
+
+                    valor = cadena9.equals( cadena11 );
+                    System.out.println(valor);
+                    
+                    System.out.println("regresar al menu 1. si 2. no");
+                    opc=leer.nextInt();
                     break;
                 case 11:
+                    System.out.println("equalsIgnoreCase(String otraCadena)");
+                    System.out.println("                String cadena12 = new String(\"hola somos del M2A\");\n" +
+"                   String cadena13 = cadena12;\n" +
+"                   String cadena14 = new String(\"hola somos del M2A!!\");\n" +
+"                   String cadena15 = new String(\"hola somos del M2A\");\n" +
+"                   boolean valorl;\n" +
+"                   valorl = cadena12.equals( cadena13 );\n" +
+"                   System.out.println(valorl );\n" +
+"                   valorl = cadena12.equals( cadena14 );\n" +
+"                   System.out.println(valorl );\n" +
+"                   valorl = cadena12.equalsIgnoreCase( cadena15 );\n" +
+"                   System.out.println(valorl);");
+                     String cadena12 = new String("hola somos del M2A");
+                        String cadena13 = cadena12;
+                        String cadena14 = new String("hola somos del M2A!!");
+                        String cadena15 = new String("hola somos del M2A");
+                        boolean valorl;
+                        valorl = cadena12.equals( cadena13 );
+                        System.out.println(valorl );
+                        valorl = cadena12.equals( cadena14 );
+                        System.out.println(valorl );
+                        valorl = cadena12.equalsIgnoreCase( cadena15 );
+                        System.out.println(valorl);
+                    System.out.println("regresar al menu 1. si 2. no");
+                    opc=leer.nextInt();
+                    break;
+                case 12:
+                    System.out.println("String getBytes()");
+                    System.out.println("            String cadena16 = new String(\"hola somos del M2A\");\n" +
+"      \n" +
+"                    try {\n" +
+"                       String cadena17 = new String( cadena16.getBytes( \"UTF-8\" ));\n" +
+"                       System.out.println(cadena17 );\n" +
+"                       cadena17 = new String (cadena16.getBytes( \"ISO-8859-1\" ));\n" +
+"                       System.out.println(cadena17 );\n" +
+"                    } catch ( UnsupportedEncodingException e) {\n" +
+"                       System.out.println(\"Unsupported character set\");\n" +
+"                    }");
+                    String cadena16 = new String("hola somos del M2A");
+      
+                    try {
+                       String cadena17 = new String( cadena16.getBytes( "UTF-8" ));
+                       System.out.println(cadena17 );
+                       cadena17 = new String (cadena16.getBytes( "ISO-8859-1" ));
+                       System.out.println(cadena17 );
+                    } catch ( UnsupportedEncodingException e) {
+                       System.out.println("Unsupported character set");
+                    }
+                    
+                    System.out.println("regresar al menu 1. si 2. no");
+                    opc=leer.nextInt();
+                    break;
+                case 13:
+                    System.out.println("String getBytes (String charsetName)");
+                    System.out.println("String cadena18 = new String(\"hola somos del m2a\");\n" +
+"                        try {\n" +
+"                           String cadena19 = new String(cadena18.getBytes( \"UTF-8\" ));\n" +
+"                           System.out.println(\"Returned Value \" + cadena19 );\n" +
+"                           cadena19 = new String (cadena18.getBytes( \"ISO-8859-1\" ));\n" +
+"                           System.out.println(\"Returned Value \" + cadena19 );\n" +
+"                        } catch ( UnsupportedEncodingException e) {\n" +
+"                           System.out.println(\"Unsupported character set\");\n" +
+"                        }");
+                      String cadena18 = new String("hola somos del m2a");
+                        try {
+                           String cadena19 = new String(cadena18.getBytes( "UTF-8" ));
+                           System.out.println(cadena19 );
+                           cadena19 = new String (cadena18.getBytes( "ISO-8859-1" ));
+                           System.out.println(cadena19 );
+                        } catch ( UnsupportedEncodingException e) {
+                           System.out.println("Unsupported character set");
+                        }
+                    System.out.println("regresar al menu 1. si 2. no");
+                    opc=leer.nextInt();
+                    break;
+                case 14:
+                    
+                    System.out.println("String getChars()");
+                    System.out.println("String cadena20 = new String(\"hola somos del M2A\");\n" +
+"                    char[] cadena21 = new char[5];\n" +
+"                    try {\n" +
+"                       cadena20.getChars(1, 7, cadena21, 0);\n" +
+"                       System.out.println(cadena21 );\n" +
+"                    } catch ( Exception ex) {\n" +
+"                       System.out.println(\"Raised exception...\");\n" +
+"                    }");
+                    String cadena20 = new String("hola somos del M2A");
+                    char[] cadena21 = new char[7];
+                    try {
+                       cadena20.getChars(1, 7, cadena21, 0);
+                       System.out.print("Copied Value = " );
+                       System.out.println(cadena21 );
+                    } catch ( Exception ex) {
+                       System.out.println("Raised exception...");
+                    }
+                    System.out.println("regresar al menu 1. si 2. no");
+                    opc=leer.nextInt();
+                    break;
+                case 15:
+                    System.out.println("hashCode()");
+                    System.out.println("String cadena22 = new String(\"Welcome to Tutorialspoint.com\");\n" +
+"                    System.out.println(\"Hashcode for Str :\" + cadena22.hashCode() );");
+                    String cadena22 = new String("hola somos del M2A");
+                    System.out.println("Hashcode for Str :" + cadena22.hashCode() );
+                            
+                    System.out.println("regresar al menu 1. si 2. no");
+                    opc=leer.nextInt();
+                    break;
+                case 16:
+                    System.out.println(" String indexOf ()");
+                    System.out.println("String cadena23 = new String(\"hola somos del M2A\");\n" +
+
+                            "                    System.out.println(cadena23.indexOf( 'a' ));\n" +
+"                    System.out.println(cadena23.indexOf( 'P' ));");
+                    String cadena23 = new String("hola somos del M2A");
+                    System.out.println(cadena23.indexOf( 'a' ));
+                    System.out.println(cadena23.indexOf( 'P' ));
+                    System.out.println("regresar al menu 1. si 2. no");
+                    opc=leer.nextInt();
+                    break;
+                case 17:
+                    System.out.println("String indexOf (int ch, int fromIndex)");
+                    System.out.println("System.out.println(\"indexOf(int ch, int fromIndex)\");\n" +
+"                    String cadena24 = new String(\"hola somos del M2A\");\n" +
+"                    System.out.println(cadena24.indexOf( 'o', 4 ));");
+                    System.out.println("indexOf(int ch, int fromIndex)");
+                    String cadena24 = new String("hola somos del M2A");
+                    System.out.println(cadena24.indexOf( 'o', 4 ));
+                    
+                    System.out.println("regresar al menu 1. si 2. no");
+                    opc=leer.nextInt();
+                    break;
+                case 18:
+                    System.out.println("String indexOf(String str) ");
+                    System.out.println("String cadena25 = new String(\"hola somos del M2A\");\n" +
+"                    String SubStr1 = new String(\"somos\");\n" +
+"                    System.out.println(cadena25.indexOf( SubStr1 ));");
+                    String cadena25 = new String("hola somos del M2A");
+                    String SubStr1 = new String("somos");
+                    System.out.println(cadena25.indexOf( SubStr1 ));
+                    
+                    System.out.println("regresar al menu 1. si 2. no");
+                    opc=leer.nextInt();
+                    break;
+                case 19:
+                    System.out.println("String indexOf(String str, int fromIndex)");
+                    System.out.println("String cadena26 = new String(\"hola somos del M2A\");\n" +
+"                    String SubStr2 = new String(\"somos\" );\n" +
+"                    System.out.println( cadena26.indexOf( SubStr2, 7 ));");
+                    String cadena26 = new String("hola somos del M2A");
+                    String SubStr2 = new String("somos" );
+                    System.out.println( cadena26.indexOf( SubStr2, 7 ));
+                    System.out.println("regresar al menu 1. si 2. no");
+                    opc=leer.nextInt();
                     break;
             }
             
@@ -170,14 +373,5 @@ public class ClaseStringyMetodos {
             
             
         }while(opc>=1 && opc<=46);
-       
-//        
-//        
-//        
-//        
-//  
-//        
-//        
-//        
-    }
+      }
 }
